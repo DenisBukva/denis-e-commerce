@@ -1,5 +1,6 @@
 import path from 'path';
 import express from 'express';
+import connectDB from './config/db.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -22,6 +23,8 @@ if (process.env.NODE_ENV === 'production') {
     res.send('API is running....');
   });
 }
+//DataBase
+connectDB();
 
 const PORT = process.env.PORT || 8000;
 
