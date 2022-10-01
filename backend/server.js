@@ -1,13 +1,26 @@
 import path from 'path';
 import express from 'express';
 import connectDB from './config/db.js';
+import morgan from 'morgan';
 import dotenv from 'dotenv';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
+import userRoutes from './routes/userRoutes.js';
 dotenv.config();
+
+//DataBase
+connectDB();
 
 const app = express();
 
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
 app.use(express.json());
+
+//Routes
+app.use('/api/users', userRoutes);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
@@ -23,8 +36,9 @@ if (process.env.NODE_ENV === 'production') {
     res.send('API is running....');
   });
 }
-//DataBase
-connectDB();
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 8000;
 
