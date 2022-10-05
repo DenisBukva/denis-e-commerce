@@ -1,9 +1,9 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import { logout } from '../../store/actions/user.actions'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Header = () => {
     const dispatch = useDispatch()
