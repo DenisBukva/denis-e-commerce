@@ -14,7 +14,14 @@ const MainRouter = () => {
       <Navigation />
       <main className='py-3'>
         <Container>
-          <Route path='/' exact component={HomeScreen} />
+          <Route path='/search/:keyword' component={HomeScreen} exact />
+          <Route path='/page/:pageNumber' component={HomeScreen} exact />
+          <Route
+            path='/search/:keyword/page/:pageNumber'
+            component={HomeScreen}
+            exact
+          />
+          <Route path='/' component={HomeScreen} exact />
           <Route path='/sign-in' component={SignIn} />
           <Route path='/register' component={Register} />
         </Container>
