@@ -63,7 +63,7 @@ const SignIn = ({ location, history }) => {
                     </Form.Control>
                 </Form.Group>
                 <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className='mt-2'>Password</Form.Label>
                     <Form.Control
                         type='password'
                         placeholder='Enter Password'
