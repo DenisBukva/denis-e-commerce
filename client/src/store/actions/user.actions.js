@@ -70,7 +70,7 @@ export const logout = () => (dispatch) => {
   dispatch({ type: USER_DETAILS_RESET });
 
   dispatch({ type: USER_LIST_RESET });
-  document.location.href = '/login';
+  document.location.href = '/sign-in';
 };
 
 export const register = (name, email, password) => async (dispatch) => {
@@ -86,7 +86,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      '/api/users/register',
+      '/api/users/',
       { name, email, password },
       config
     );

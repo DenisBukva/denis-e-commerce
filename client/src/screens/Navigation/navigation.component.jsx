@@ -12,7 +12,7 @@ const Header = () => {
     const { userInfo } = userLogin
 
     const logoutHandler = () => {
-        dispatch(logout())
+        dispatch(logout());
     }
 
     return (
@@ -32,7 +32,7 @@ const Header = () => {
                             </Link>
                             {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
-                                    <Link to='/profile'>
+                                    <Link className='nav-link' to='/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </Link>
                                     <NavDropdown.Item onClick={logoutHandler}>

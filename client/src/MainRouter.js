@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Navigation from './screens/Navigation/navigation.component';
 import HomeScreen from './screens/Home/home.component';
 import SignIn from './screens/SignIn/signIn.component';
-import Register from './screens/Register/register.component';
+import SignUp from './screens/SignUp/signUp.component';
 
 import Footer from './components/Footer/footer.component';
 
@@ -23,7 +23,7 @@ const MainRouter = () => {
           />
           <Route path='/' component={HomeScreen} exact />
           <Route path='/sign-in' component={SignIn} />
-          <Route path='/register' component={Register} />
+          <Route path='/register' component={SignUp} />
         </Container>
       </main>
       <Footer />
