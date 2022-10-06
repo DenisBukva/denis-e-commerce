@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
 import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Helmet } from 'react-helmet-async';
 
 import FormContainer from '../../components/FormContainer/formContainer.component';
 import Loader from '../../components/Loader/loader.component';
@@ -57,6 +57,9 @@ const SignUp = ({ location, history }) => {
     return (
         <>
             <FormContainer>
+                <Helmet>
+                    <title>Denis-E-Commerce - SignUp</title>
+                </Helmet>
                 <h1>Sign Up</h1>
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
