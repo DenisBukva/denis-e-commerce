@@ -10,8 +10,18 @@ import {
   userDeleteReducer,
   userUpdateReducer,
 } from './reducers/user.reducer';
+import {
+  productListReducer,
+  productDetailsReducer,
+  productDeleteReducer,
+  productCreateReducer,
+  porductUpdateReducer,
+  productReviewCreateReducer,
+  productTopRatedReducer,
+} from './reducers/productReducer';
 
 const reducer = combineReducers({
+  //User
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
@@ -19,6 +29,14 @@ const reducer = combineReducers({
   userList: userListReducer,
   userDeleter: userDeleteReducer,
   userUpdate: userUpdateReducer,
+  //Product
+  productList: productListReducer,
+  productDetails: productDetailsReducer,
+  productDelete: productDeleteReducer,
+  productCreate: productCreateReducer,
+  productUpdate: porductUpdateReducer,
+  productReviewCreate: productReviewCreateReducer,
+  productTopRated: productTopRatedReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
