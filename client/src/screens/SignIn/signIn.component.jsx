@@ -85,7 +85,7 @@ const SignIn = ({ location, history }) => {
             <Row className='py-3'>
                 <Col>
                     Don't have an account?{' '}
-                    <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+                    <Link className='link-auth' to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                         Sign Up
                     </Link>
                 </Col>

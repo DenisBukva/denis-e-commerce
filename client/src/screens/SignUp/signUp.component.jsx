@@ -119,7 +119,7 @@ const SignUp = ({ location, history }) => {
                 <Row className='py-3'>
                     <Col>
                         Already have an account?{' '}
-                        <Link to={redirect ? `/sign-in?redirect=${redirect}` : '/sign-in'}>
+                        <Link className='link-auth' to={redirect ? `/sign-in?redirect=${redirect}` : '/sign-in'}>
                             Login
                         </Link>
                     </Col>
