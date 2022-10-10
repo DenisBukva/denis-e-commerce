@@ -19,6 +19,7 @@ import {
   productReviewCreateReducer,
   productTopRatedReducer,
 } from './reducers/productReducer';
+import { cartReducer } from './reducers/cart.reducer';
 
 const reducer = combineReducers({
   //User
@@ -37,13 +38,22 @@ const reducer = combineReducers({
   productUpdate: porductUpdateReducer,
   productReviewCreate: productReviewCreateReducer,
   productTopRated: productTopRatedReducer,
+  //Cart
+  cart: cartReducer,
 });
+
+const cartItemsFromStorage = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
+  : [];
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null;
 
 const initialState = {
+  cart: {
+    cartItems: cartItemsFromStorage,
+  },
   userLogin: { userInfo: userInfoFromStorage },
 };
 
