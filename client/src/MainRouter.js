@@ -6,6 +6,7 @@ import HomeScreen from './screens/Home/home.component';
 import SignIn from './screens/SignIn/signIn.component';
 import SignUp from './screens/SignUp/signUp.component';
 import ProductScreen from './screens/ProductScreen/productScreen.component';
+import CartScreen from './screens/CartScreen/cartScreen.component';
 
 import Footer from './components/Footer/footer.component';
 
@@ -16,6 +17,7 @@ const MainRouter = () => {
       <main className='py-3'>
         <Container>
           <Route path='/product/:id' component={ProductScreen} />
+          <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/search/:keyword' component={HomeScreen} exact />
           <Route path='/page/:pageNumber' component={HomeScreen} exact />
           <Route
