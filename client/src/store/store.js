@@ -20,6 +20,14 @@ import {
   productTopRatedReducer,
 } from './reducers/productReducer';
 import { cartReducer } from './reducers/cart.reducer';
+import {
+  orderCreateReducer,
+  orderDetailsReducer,
+  orderPayReducer,
+  orderDeliverReducer,
+  orderListMyReducer,
+  orderListReducer,
+} from './reducers/order.reducer';
 
 const reducer = combineReducers({
   //User
@@ -40,6 +48,13 @@ const reducer = combineReducers({
   productTopRated: productTopRatedReducer,
   //Cart
   cart: cartReducer,
+  //Order
+  orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderDeliver: orderDeliverReducer,
+  orderMyList: orderListMyReducer,
+  orderList: orderListReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')
