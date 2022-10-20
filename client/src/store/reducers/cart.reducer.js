@@ -34,17 +34,17 @@ export const cartReducer = (
     case CART_REMOVE_ITEM:
       return {
         ...state,
-        cartItems: state.cartItems.filter((x) => x.product !== action.payload),
+        cartItems: state.cartItems.filter((x) => x.product !== payload),
       };
     case CART_SAVE_SHIPPING_ADDRESS:
       return {
         ...state,
-        shippingAddress: action.payload,
+        shippingAddress: payload,
       };
     case CART_SAVE_PAYMENT_METHOD:
       return {
         ...state,
-        paymentMethod: action.payload,
+        paymentMethod: payload,
       };
     case CART_CLEAR_ITEMS:
       return {
