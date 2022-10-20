@@ -8,6 +8,7 @@ import SignUp from './screens/SignUp/signUp.component';
 import ProductScreen from './screens/ProductScreen/productScreen.component';
 import CartScreen from './screens/CartScreen/cartScreen.component';
 import ProfileScreen from './screens/ProfileScreen/profileScreen.component';
+import ShippingScreen from './screens/Shipping/shipping.compoinent';
 
 import Footer from './components/Footer/footer.component';
 
@@ -17,6 +18,7 @@ const MainRouter = () => {
       <Navigation />
       <main className='py-3'>
         <Container>
+          <Route path='/shipping' component={ShippingScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
