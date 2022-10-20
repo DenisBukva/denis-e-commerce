@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet-async';
 import CheckoutSteps from '../../components/CheckoutSteps/checkOutSteps';
 import FormContainer from '../../components/FormContainer/formContainer.component';
 import { saveShippingAddress } from '../../store/actions/cart.actions';
@@ -25,7 +26,9 @@ const ShippingScreen = ({ history }) => {
 
     return (
         <>
-
+            <Helmet>
+                <title>Denis-E-Commerce - Shipping</title>
+            </Helmet>
             <FormContainer>
                 <CheckoutSteps step1 step2 />
                 <h1>Shipping</h1>
