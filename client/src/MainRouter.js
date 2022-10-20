@@ -9,6 +9,7 @@ import ProductScreen from './screens/ProductScreen/productScreen.component';
 import CartScreen from './screens/CartScreen/cartScreen.component';
 import ProfileScreen from './screens/ProfileScreen/profileScreen.component';
 import ShippingScreen from './screens/Shipping/shipping.compoinent';
+import PaymentScreen from './screens/PaymentScreen/payment.component';
 
 import Footer from './components/Footer/footer.component';
 
@@ -19,6 +20,7 @@ const MainRouter = () => {
       <main className='py-3'>
         <Container>
           <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/payment' component={PaymentScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
