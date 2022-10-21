@@ -10,6 +10,10 @@ import CartScreen from './screens/CartScreen/cartScreen.component';
 import ProfileScreen from './screens/ProfileScreen/profileScreen.component';
 import ShippingScreen from './screens/Shipping/shipping.compoinent';
 import PaymentScreen from './screens/PaymentScreen/payment.component';
+import OrderInformationScreen from './screens/OrderInformationScreen/orderInformation.component';
+import OrderScreen from './screens/OrderScreen/orderScreen.component';
+//Admin
+import UserList from './screens/UserList/userList.component';
 
 import Footer from './components/Footer/footer.component';
 
@@ -21,9 +25,16 @@ const MainRouter = () => {
         <Container>
           <Route path='/shipping' component={ShippingScreen} />
           <Route path='/payment' component={PaymentScreen} />
+          <Route path='/order/:id' component={OrderScreen} />
+          <Route path='/orderinformation' component={OrderInformationScreen} />
+
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
+
+          {/* Admin Routes */}
+          <Route path='/admin/userlist' component={UserList} />
+
           <Route path='/search/:keyword' component={HomeScreen} exact />
           <Route path='/page/:pageNumber' component={HomeScreen} exact />
           <Route
