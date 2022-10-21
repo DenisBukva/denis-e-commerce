@@ -4,11 +4,13 @@ import { Table, Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux';
 import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css';
+
 
 import Message from '../../components/Message/message.component';
 import Loader from '../../components/Loader/loader.component';
-import { listUsers, deleteUser } from '../../store/actions/user.actions'
+import { listUsers, deleteUser } from '../../store/actions/user.actions';
+
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 
 const UserList = ({ history }) => {
