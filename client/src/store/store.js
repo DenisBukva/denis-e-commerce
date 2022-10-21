@@ -36,7 +36,7 @@ const reducer = combineReducers({
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
   userList: userListReducer,
-  userDeleter: userDeleteReducer,
+  userDelete: userDeleteReducer,
   userUpdate: userUpdateReducer,
   //Product
   productList: productListReducer,
