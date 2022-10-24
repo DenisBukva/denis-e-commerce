@@ -36,6 +36,7 @@ const ShippingScreen = ({ history }) => {
                     <Form.Group controlId='address'>
                         <Form.Label>Address</Form.Label>
                         <Form.Control
+                            className='form-control form-control-lg'
                             type='text'
                             placeholder='Enter a address'
                             value={address || ''}
@@ -44,9 +45,10 @@ const ShippingScreen = ({ history }) => {
                         ></Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId='city'>
+                    <Form.Group controlId='city' className='mt-3'>
                         <Form.Label>City</Form.Label>
                         <Form.Control
+                            className='form-control form-control-lg'
                             type='text'
                             placeholder='Enter a city'
                             value={city || ''}
@@ -55,10 +57,11 @@ const ShippingScreen = ({ history }) => {
                         ></Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId='postal Code'>
+                    <Form.Group controlId='postal Code' className='mt-3'>
                         <Form.Label>Postal Code</Form.Label>
                         <Form.Control
                             type='text'
+                            className='form-control form-control-lg'
                             placeholder='Enter a postal code'
                             value={postalCode || ''}
                             required
@@ -66,7 +69,7 @@ const ShippingScreen = ({ history }) => {
                         ></Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId='country'>
+                    <Form.Group controlId='country' className='mt-3'>
                         <Form.Label>Country</Form.Label>
                         <Form.Control
                             type='text'
@@ -77,7 +80,7 @@ const ShippingScreen = ({ history }) => {
                         ></Form.Control>
                     </Form.Group>
 
-                    <Button className='mt-3' type='submit' variant='primary'>
+                    <Button className='mt-4 btn-lg' type='submit' variant='primary'>
                         Continue
                     </Button>
                 </Form>

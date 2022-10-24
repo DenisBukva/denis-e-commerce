@@ -7,7 +7,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
         <Nav className='justify-content-center mb-4'>
             <Nav.Item>
                 {step1 ? (
-                    <LinkContainer to='/sign-in'>
+                    <LinkContainer to='/sign-in' className='text-primary'>
                         <Nav.Link>Sign in</Nav.Link>
                     </LinkContainer>
                 ) : <Nav.Link disabled>Sign in </Nav.Link>}
@@ -23,7 +23,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
             <Nav.Item>
                 {step3 ? (
-                    <LinkContainer to='/payment'>
+                    <LinkContainer to='/payment' className='text-light'>
                         <Nav.Link>Payment</Nav.Link>
                     </LinkContainer>
                 ) : <Nav.Link disabled>Payment</Nav.Link>}
@@ -31,7 +31,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
             <Nav.Item>
                 {step4 ? (
-                    <LinkContainer to='/placeorder'>
+                    <LinkContainer to='/placeorder' className='text-info'>
                         <Nav.Link>Place Order</Nav.Link>
                     </LinkContainer>
                 ) : <Nav.Link disabled>Place Order </Nav.Link>}

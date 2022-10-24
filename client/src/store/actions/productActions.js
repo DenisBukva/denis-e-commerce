@@ -133,7 +133,9 @@ export const createProduct = () => async (dispatch, getState) => {
 
 export const updateProduct = (product) => async (dispatch, getState) => {
   try {
-    dispatch({ type: PRODUCT_UPDATE_REQUEST });
+    dispatch({
+      type: PRODUCT_UPDATE_REQUEST,
+    });
 
     const {
       userLogin: { userInfo },

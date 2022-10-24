@@ -38,7 +38,7 @@ const PaymentScreen = ({ history }) => {
                         <Form.Label as='legend'>Payment Method</Form.Label>
                         <Col>
                             <Form.Check
-                                style={{ marginBottom: '10px' }}
+                                className='mt-3'
                                 type='radio'
                                 label='PayPal or CreditCart'
                                 id='PayPal'
@@ -49,6 +49,7 @@ const PaymentScreen = ({ history }) => {
                             </Form.Check>
 
                             <Form.Check
+                                className='mt-3'
                                 type='radio'
                                 label='Stripe'
                                 id='Stripe'

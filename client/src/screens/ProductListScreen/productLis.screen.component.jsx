@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet-async';
@@ -53,7 +52,7 @@ const ProductListScreen = ({ match, history }) => {
                 },
                 {
                     label: 'No',
-                    onClick: () => history.push('/admin/products')
+                    onClick: () => history.push('/admin/productlist')
                 }
             ]
         });

@@ -16,6 +16,8 @@ import OrderScreen from './screens/OrderScreen/orderScreen.component';
 import UserList from './screens/UserList/userList.component';
 import UserEdit from './screens/UserEditScreen/editUser.component';
 import ProductListScreen from './screens/ProductListScreen/productLis.screen.component';
+import ProductEditScreen from './screens/AddProductScreen/addProduct.component';
+import OrderListScreen from './screens/OrderList/orderList.component';
 
 import Footer from './components/Footer/footer.component';
 
@@ -37,7 +39,18 @@ const MainRouter = () => {
           {/* Admin Routes */}
           <Route path='/admin/userlist' component={UserList} />
           <Route path='/admin/user/:id/edit' component={UserEdit} />
-          <Route path='/admin/productlist' component={ProductListScreen} />
+          <Route
+            path='/admin/productlist'
+            exact
+            component={ProductListScreen}
+          />
+          <Route
+            path='/admin/productlist/:pageNumber'
+            component={ProductListScreen}
+            exact
+          />
+          <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
+          <Route path='/admin/orderlist' component={OrderListScreen} />
 
           <Route path='/search/:keyword' component={HomeScreen} exact />
           <Route path='/page/:pageNumber' component={HomeScreen} exact />

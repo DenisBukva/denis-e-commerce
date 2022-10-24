@@ -59,9 +59,9 @@ const OrderInformationScreen = ({ history }) => {
                         <ListGroup.Item>
                             <h2>Shipping</h2>
                             <p><strong>Address: </strong>
-                                {cart.shippingAddress.address}
-                                {cart.shippingAddress.city}
-                                {cart.shippingAddress.postalCode}
+                                {cart.shippingAddress.address} {' '}
+                                {cart.shippingAddress.city}{' '}
+                                {cart.shippingAddress.postalCode}{' '}
                                 {cart.shippingAddress.country}
                             </p>
                         </ListGroup.Item>
@@ -83,7 +83,7 @@ const OrderInformationScreen = ({ history }) => {
                                                         <Image src={item.image} alt={item.name} fluid rounded />
                                                     </Col>
                                                     <Col>
-                                                        <Link to={`/product/${item.product}`}>
+                                                        <Link to={`/product/${item.product}`} className='text-decoration-none text-info'>
                                                             {item.name}
                                                         </Link>
                                                     </Col>
@@ -107,7 +107,7 @@ const OrderInformationScreen = ({ history }) => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>
-                                        Items
+                                        Items:
                                     </Col>
                                     <Col>
                                         ${cart.itemsPrice}
@@ -117,7 +117,7 @@ const OrderInformationScreen = ({ history }) => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>
-                                        Shipping
+                                        Shipping:
                                     </Col>
                                     <Col>
                                         ${cart.shippingPrice}
@@ -127,7 +127,7 @@ const OrderInformationScreen = ({ history }) => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>
-                                        Tax
+                                        Tax:
                                     </Col>
                                     <Col>
                                         ${cart.taxPrice}
@@ -137,7 +137,7 @@ const OrderInformationScreen = ({ history }) => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>
-                                        Total
+                                        Total:
                                     </Col>
                                     <Col>
                                         ${cart.totalPrice}

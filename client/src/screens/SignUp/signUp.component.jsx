@@ -69,6 +69,7 @@ const SignUp = ({ location, history }) => {
                         <Form.Label>Name</Form.Label>
                         <Form.Control
                             type='name'
+                            className='form-control form-control-lg'
                             placeholder='Enter a Name'
                             required
                             onChange={handleChange}
@@ -76,10 +77,11 @@ const SignUp = ({ location, history }) => {
                             name='name'>
                         </Form.Control>
                     </Form.Group>
-                    <Form.Group controlId='email'>
+                    <Form.Group controlId='email' className='mt-3'>
                         <Form.Label className='mt-2'>Email</Form.Label>
                         <Form.Control
                             type='email'
+                            className='form-control form-control-lg'
                             placeholder='Enter Email'
                             required
                             onChange={handleChange}
@@ -87,10 +89,11 @@ const SignUp = ({ location, history }) => {
                             name='email'>
                         </Form.Control>
                     </Form.Group>
-                    <Form.Group controlId='password'>
+                    <Form.Group controlId='password' className='mt-3'>
                         <Form.Label className='mt-2'>Password</Form.Label>
                         <Form.Control
                             type='password'
+                            className='form-control form-control-lg'
                             placeholder='Enter Password'
                             required
                             onChange={handleChange}
@@ -99,10 +102,11 @@ const SignUp = ({ location, history }) => {
                             minLength="5">
                         </Form.Control>
                     </Form.Group>
-                    <Form.Group controlId='confirmPassword'>
+                    <Form.Group controlId='confirmPassword' className='mt-3'>
                         <Form.Label className='mt-2'>Confirm Password</Form.Label>
                         <Form.Control
                             type='password'
+                            className='form-control form-control-lg'
                             placeholder='Confirm Password'
                             required
                             onChange={handleChange}
@@ -112,14 +116,14 @@ const SignUp = ({ location, history }) => {
                         </Form.Control>
                     </Form.Group>
 
-                    <Button className='mt-3' type='submit' variant='primary'>
+                    <Button className='mt-3 btn-lg' type='submit' variant='primary'>
                         Sign Up
                     </Button>
                 </Form>
                 <Row className='py-3'>
                     <Col>
                         Already have an account?{' '}
-                        <Link className='link-auth' to={redirect ? `/sign-in?redirect=${redirect}` : '/sign-in'}>
+                        <Link className='text-primary text-decoration-none' to={redirect ? `/sign-in?redirect=${redirect}` : '/sign-in'}>
                             Login
                         </Link>
                     </Col>

@@ -1,9 +1,7 @@
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap';
-// import { Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-// import SearchBox from '../../components/SearchBox/searchBox.component';
 import { logout } from '../../store/actions/user.actions';
 
 
@@ -20,15 +18,14 @@ const Header = () => {
     return (
 
         <header>
-            <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-                <Container>
+            <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelectcollapseOnSelect>
+                <Container className='container-fluid'>
                     <LinkContainer to='/'>
                         <Navbar.Brand>E-SHOP</Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
-                        {/* <Route render={({ history }) => <SearchBox history={history} />} /> */}
-                        <Nav className='ml-auto' style={{ marginLeft: '85%' }}>
+                        <Nav className='ml-auto' style={{ marginLeft: '75%' }}  >
                             <LinkContainer to='/cart'>
                                 <Nav.Link>
                                     <i className='fas fa-shopping-cart'></i> Cart

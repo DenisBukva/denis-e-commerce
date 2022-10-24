@@ -55,10 +55,11 @@ const SignIn = ({ location, history }) => {
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
-                <Form.Group controlId='email'>
+                <Form.Group controlId='email' className='mt-3'>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
                         type='email'
+                        className='form-control form-control-lg'
                         placeholder='Enter Email'
                         required
                         onChange={handleChange}
@@ -66,10 +67,11 @@ const SignIn = ({ location, history }) => {
                         name='email'>
                     </Form.Control>
                 </Form.Group>
-                <Form.Group controlId='password'>
+                <Form.Group controlId='password' className='mt-3'>
                     <Form.Label className='mt-2'>Password</Form.Label>
                     <Form.Control
                         type='password'
+                        className='form-control form-control-lg'
                         placeholder='Enter Password'
                         required
                         onChange={handleChange}
@@ -78,14 +80,14 @@ const SignIn = ({ location, history }) => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button className='mt-4' type='submit' variant='primary'>
+                <Button className='mt-4 btn-lg' type='submit' variant='primary'>
                     Sign In
                 </Button>
             </Form>
             <Row className='py-3'>
                 <Col>
                     Don't have an account?{' '}
-                    <Link className='link-auth' to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+                    <Link className=' text-primary text-decoration-none' to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                         Sign Up
                     </Link>
                 </Col>
