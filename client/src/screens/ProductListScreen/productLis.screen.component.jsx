@@ -8,6 +8,7 @@ import { confirmAlert } from 'react-confirm-alert';
 import Message from "../../components/Message/message.component";
 import Loader from "../../components/Loader/loader.component";
 import Paginate from "../../components/Paginate/paginate.component";
+import OrderRow from "../../components/OrderRow/orderRow.component";
 import { listProducts, createProduct, deleteProduct } from '../../store/actions/productActions';
 import { PRODUCT_CREATE_RESET } from '../../store/constants/product.constants';
 
@@ -43,8 +44,8 @@ const ProductListScreen = ({ match, history }) => {
 
     const deleteHandler = (id) => {
         confirmAlert({
-            title: 'Delete User',
-            message: 'Are you sure you want to delete this user?',
+            title: 'Delete Product',
+            message: 'Are you sure you want to delete this Product?',
             buttons: [
                 {
                     label: 'Yes',
@@ -95,26 +96,13 @@ const ProductListScreen = ({ match, history }) => {
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {products.map(product => (
-                                <tr key={product._id}>
-                                    <td>{product._id}</td>
-                                    <td>{product.name}</td>
-                                    <td>${product.price}</td>
-                                    <td>{product.category}</td>
+                        {products.map(product => (
+                            <React.Fragment key={product._id}>
+                                <OrderRow product={product} deleteHandler={deleteHandler} />
+                            </React.Fragment>
 
-                                    <td>{product.brand}</td>
-                                    <LinkContainer to={`/admin/product/${product._id}/edit`}><Button variant='light' className='btn-sm'>
-                                        <i className='fas fa-edit'></i>
-                                    </Button>
-                                    </LinkContainer>
-                                    <Button variant='danger' className='btn-sm' onClick={() => deleteHandler(product._id)}>
-                                        <i className='fas fa-trash'></i>
-                                    </Button>
+                        ))}
 
-                                </tr>
-                            ))}
-                        </tbody>
                     </Table>
                     <Paginate pages={pages} page={page} isAdmin={true} />
                 </>
